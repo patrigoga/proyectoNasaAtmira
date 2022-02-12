@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<div class="container mt-5">
+
+    <div class=" container" >
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-6" *ngFor="let fotos of arrFotos">
+        <div class="card mt-5" style="width: 20rem;">
+            <img class="" style="max-height: 250px" [src]="fotos.url"> 
+            <div class="card-body">
+                <h5 class="card-title bg-dark text-danger">{{fotos.title}}</h5>
+                <p class="card-text text-success">fecha: {{fotos.date}}</p>
+              <a href="#" class="btn btn-primary d-grid gap-2 bg-danger">{{fotos.title}}</a>
+            </div>
+          </div>
+    </div>
+    
+  </div>
+ 
+
