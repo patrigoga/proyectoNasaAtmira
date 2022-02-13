@@ -10,10 +10,17 @@ export class FotosService {
 
   constructor(private http: HttpClient) {
 
-    this.baseUrl= 'https://api.nasa.gov/planetary/apod?api_key=zdUP8ElJv1cehFM0rsZVSQN7uBVxlDnu4diHlLSb&date=&start_date=2022-02-07&end_date=2022-02-12';
+    this.baseUrl= 'https://api.nasa.gov/planetary/apod?api_key=zdUP8ElJv1cehFM0rsZVSQN7uBVxlDnu4diHlLSb&date=&start_date=2022-02-08&end_date=2022-02-13';
    }
 
   getAll(): Promise<any[]>{
    return this.http.get<any[]>(this.baseUrl).toPromise();
   }
+  
+  getByID(fechaId: string):Promise<any>{
+    return this.http.get<any>(`${this.baseUrl}/${fechaId}`).toPromise();
+  }
+
+
+  
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { DetalleComponent } from './componentes/detalle/detalle.component';
+import { Fotos } from './models/fotos.model';
 
 const routes: Routes = [
 

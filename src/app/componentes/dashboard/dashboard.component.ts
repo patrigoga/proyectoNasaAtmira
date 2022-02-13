@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { FotosService } from 'src/app/services/fotos.service';
 
 @Component({
@@ -21,7 +21,16 @@ export class DashboardComponent implements OnInit {
 
       .catch(error => console.log(error));
 
-  }
+      }
+
+     async onClick(fechaId: string){
+       try{
+      const fecha=  await this.fotosService.getByID(fechaId);
+      console.log(fecha);
+       }catch(error){
+         console.log(error);
+       }
+      }
 
  
 
