@@ -10,6 +10,7 @@ export class DashboardComponent implements OnInit {
 
   
   arrFotos: any[] = [];
+  detalleFotos: any;
 
   constructor(private fotosService: FotosService ){ }
    
@@ -26,7 +27,8 @@ export class DashboardComponent implements OnInit {
      async onClick(fechaId: string){
        try{
       const fecha=  await this.fotosService.getByID(fechaId);
-      console.log(fecha);
+      this.detalleFotos = fechaId;
+      
        }catch(error){
          console.log(error);
        }

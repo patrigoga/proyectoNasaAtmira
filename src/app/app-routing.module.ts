@@ -10,6 +10,7 @@ const routes: Routes = [
 
   {path:'dashboard', component:DashboardComponent},
   {path:'detalles', component:DetalleComponent},
+  {path:'detalles/:fechaId', component:DetalleComponent},
   {path:'**',redirectTo:'dashboard'}
   
 ];
